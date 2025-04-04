@@ -135,7 +135,7 @@ const PlaceOrderScreen = () => {
                             </ListGroup.Item>
 
                             <ListGroup.Item>
-                                <Button type='button' className='btn-block' disabled={cart.cartItems.length == 0}
+                                <Button type='button' className='btn-block' disabled={cart.cartItems.length === 0}
                                 onClick={placeOrderHandler}>Place Order</Button>
                                 {isLoading && <Loader/>}
                             </ListGroup.Item>
