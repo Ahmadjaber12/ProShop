@@ -4,7 +4,7 @@ import * as AuthFunctions from '../Middleware/authFunctions.js'
 const router=express.Router();
 
 router.route('/').get(AuthFunctions.VerifyToken,orderController.getAllOrders);
-router.get('/admin',AuthFunctions.VerifyToken,AuthFunctions.Admin,orderController.getAdminOrders);
+router.get('/admin',orderController.getAdminOrders);
 router.get('/:id',AuthFunctions.VerifyToken,orderController.getOrderById);
 router.post('/',AuthFunctions.VerifyToken,orderController.addOrderItems);
 router.put('/:id/pay',AuthFunctions.VerifyToken,orderController.UpdateOrderToPaid);

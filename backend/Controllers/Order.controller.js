@@ -22,7 +22,7 @@ export const addOrderItems=async (req,res)=>{
             taxPrice,shippingPrice,totalPrice
         })
         const createdOrder=await neworder.save();
-        res.status(201).json({message:neworder});
+        res.status(201).json({message:createdOrder});
     }
 
    

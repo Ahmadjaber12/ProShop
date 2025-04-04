@@ -34,6 +34,7 @@ const OrdersListScreen = () => {
                       <tbody>
                         {orders.map((ordr)=>(
                           <tr key={ordr._id}>
+                              <td>{ordr._id}</td>
                               <td>{ordr.user  && ordr.user.name}</td>
                               <td>{ordr.createdAt.substring(0,10)}</td>
                               <td>{ordr.totalPrice}</td>
